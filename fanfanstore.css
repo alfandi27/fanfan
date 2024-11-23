@@ -1,0 +1,248 @@
+body {
+            background-color: var(--bg-main);
+            min-height: 100vh;
+        }
+    
+        .main-container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    
+        .header-card {
+            background: var(--primary);
+            border-radius: 16px;
+            padding: 20px;
+            color: white;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px var(--primary-light);
+        }
+    
+        .brand-title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+    
+        .amount-display {
+            text-align: center;
+            padding: 10px 0;
+        }
+    
+        .amount-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+    
+        .amount-value {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+    
+        .timer-badge {
+            background: var(--timer-bg);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            font-weight: 700;
+            gap: 8px;
+        }
+    
+        .details-card {
+            background: var(--bg-white);
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+    
+        .details-header {
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            background: var(--bg-white);
+            transition: background-color 0.2s ease;
+            border-bottom: 1px solid var(--border-color);
+        }
+    
+        .details-header:hover {
+            background-color: var(--bg-muted);
+        }
+    
+        .details-header h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    
+        .details-header h3 i {
+            font-size: 18px;
+            color: var(--primary);
+        }
+    
+        .details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    
+        .details-content.expanded {
+            max-height: 500px;
+        }
+    
+        .toggle-icon {
+            transition: transform 0.3s ease;
+            color: var(--primary);
+            font-size: 14px;
+        }
+    
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+    
+        .detail-items {
+            padding: 8px 24px;
+        }
+    
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s ease;
+        }
+    
+        .detail-item:last-child {
+            border-bottom: none;
+        }
+    
+        .detail-item:hover {
+            background-color: #f8f9fa;
+        }
+    
+        .detail-label {
+            color: var(--text-muted);
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    
+        .detail-label i {
+            color: var(--text-icon);
+            font-size: 16px;
+        }
+    
+        .detail-value {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-dark);
+            background: #f8fafc;
+            padding: 6px 12px;
+            border-radius: 8px;
+            min-width: 100px;
+            text-align: right;
+        }
+    
+        .qr-section {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+    
+        .qr-container {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 16px;
+            border: 2px solid var(--border-light);
+        }
+    
+        .action-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 600;
+            width: 100%;
+            margin-top: 16px;
+            transition: all 0.3s ease;
+        }
+    
+        .action-button:hover {
+            background: var(--primary-dark);
+        }
+    
+        .alert-expired {
+            background: var(--alert-bg);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--alert-text);
+        }
+    
+        .alert-expired i {
+            font-size: 20px;
+        }
+    
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 16px;
+            }
+            
+            .amount-value {
+                font-size: 28px;
+            }
+        }
+    
+        /* Modal styling */
+        .qr-modal .modal-content {
+            border-radius: 16px;
+            border: none;
+        }
+    
+        .qr-modal .modal-body {
+            padding: 24px;
+        }
+    
+        .qr-modal .modal-title {
+            color: var(--primary);
+            font-weight: 700;
+        }
+    
+        .close-modal-btn {
+            background: var(--bg-button);
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            width: 100%;
+            font-weight: 600;
+            color: #666;
+            margin-top: 16px;
+        }
+
+        #success-icon {
+    margin-top: 10px;
+}
